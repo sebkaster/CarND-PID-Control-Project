@@ -31,6 +31,7 @@ public:
      */
     double TotalError();
 
+
 private:
     /**
      * PID Errors
@@ -45,6 +46,11 @@ private:
     double Kp;
     double Ki;
     double Kd;
+
+    /*
+     * helper variables
+     */
+    bool first_iteration;
 };
 
 #endif  // PID_H
