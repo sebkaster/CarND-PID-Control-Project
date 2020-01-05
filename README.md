@@ -120,5 +120,8 @@ for the throttle value since a bias in the steering does not effect the speed.
 
 ### Describe how the final parameters where chosen
 
-The parameters of both controller were chosen manually by trial and error:
+The parameters of both controllers were chosen manually by trial and error:
+
+* Steering controller: P: 0.15, I: 0.0001 D: 1.0
+* Throttle controller: P: 0.1 I: 0.0 D: 8.0
 
