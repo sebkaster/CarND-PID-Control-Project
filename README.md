@@ -93,6 +93,32 @@ that's just a guess.
 One last note here: regardless of the IDE used, every submitted project must
 still be compilable with cmake and make./
 
-## How to write a README
-A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
+
+## Reflection
+
+You can find the implementation in the files: _src/PID.h_, _src/PID.cpp_, and _src/main.cpp_.
+The folder _videos_ contains a video of one lap of driving by the use of the implemented controller.
+
+### Describe each component of the PID controller
+
+* P (Proportional): The P-value is proportional to the error 
+e(t) = SP - PV. If `e(t) = 0, P is also 0. With respect to this project P
+is the portion of the controller which tries to steer the car towards the 
+center of the lane. If used alone the car overshoots quiet easily.
+
+* I (Integral): The I-value accounts for the sum of the past errors. This part tries to eliminate a
+possible error bias on the controlled system.
+
+* D (Derivative): The D-value estimates the future trend of the error based on the current error 
+e(t) and the last error e(t-1). It counteracts the overshooting of the P-portion and helps to stay in the 
+center line during curves.
+
+### Describe your solution
+
+I used a PID controller for the steering value and a PD controller for the throttle. I did not use an integral part
+for the throttle value since a bias in the steering does not effect the speed.
+
+### Describe how the final parameters where chosen
+
+The parameters of both controller were chosen manually by trial and error:
 
